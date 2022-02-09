@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function popupOpen(){
+		// 새로운 창을 생성하여 보여주기
+		// 1. 새창에 표시할 파일명
+		// 2. 윈도우 이름(창이름)
+		// 3. 옵션 (창의크기 , 높이 , left, top 등..)
+		win = window.open("popup.html","w","width=400, height=400, left=300px, top=200px, resizable=no");
+		
+		var x = screen.width/2 - win.outerWidth/2;
+		var y = screen.height/2 - win.outerHeight/2;
+		
+		win.moveTo(x,y);
+	}
+	
+	function popupClose() {
+		win.close();
+		self.close(); //window.close();//현재창닫기
+	}
+	function popupMove() {
+		//윈도우 이동
+		//1. 절대 좌표로 이동하기 x(left), y(top)
+		//win.moveTo(100,500);
+		//2. 상대 좌표로 이동하기
+		win.moveBy(-10,10);
+	}
+	
+	function popupResize() {
+		//윈도우 크기조절
+		//1. 절대크기
+		//win.resizeTo(200,200);
+		
+		//2. 상대크기(현재사이즈 기준으로 폭,높이)
+		win.resizeBy(10,10)
+	}
+	function winInfor() {
+		var txt ="";
+		//윈도우 객체의 정보 구하기
+		txt += "<h2>window 객체</h2>";
+		//좌표 구하기 : left =x , top=y의 위치를 구한다
+		txt += "window.screenX -> " + window.screenX + "<br>";
+		txt += "window.screenY -> " + window.screenY + "<br>";
+		
+		//윈도우 폭과 높이 구하기
+		//제목과 툴바와 테두리등을 포함하여 전체 폭과 높이
+		txt += "window.outerWidth -> " + window.outerWidth + "<br>";
+		txt += "window.outerHeight -> " + window.outerHeight + "<br>";
+		
+		//제목과 툴바와 테두리등을 뺀 폭과 높이
+		txt += "window.innerWidth ->" + window.innerWidth + "<br>";
+		txt += "window.innerHeight ->" + window.innerHeight + "<br>";
+		
+		txt += "<h2>screen 객체</h2>";
+		
+		//작업 표시줄을 포함한 폭과 높이
+		txt += "screen.width ->" + screen.width + "<br>";
+		txt += "screen.height ->" + screen.height + "<br>";
+		
+		//작업 표시줄을 제외한 폭과 높이
+		txt += "screen.availWidth ->" + screen.availWidth + "<br>";
+		txt += "screen.availHeight ->" + screen.availHeight + "<br>";
+		
+		document.getElementById("winView").innerHTML = txt;
+	}
+</script>
+</head>
+<body>
+
+<button onclick="popupOpen()">pop-up-button</button>
+<button onclick="popupClose()">pop-up-close</button>
+<button onclick="popupMove()">pop-up-move</button>
+<button onclick="popupResize()">pop-up-resize</button>
+<button onclick="winInfor()">윈도우 객체 정보</button>
+<div id="winView"></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#result{background-color: pink;}
+</style>
+<script type="text/javascript">
+
+	var num = true;
+	document.write(num);
+
+	//함수 생성 : 함수는 호출시에 실행 됨 (호출 안하면 실행 X)
+	//		 함수명(매개변수)
+	function gugudan(dan){
+		var gugu = "";
+		for(var i=2; i<=9; i++){
+			gugu += dan + " X "+ i + "=" + dan * i + "<br/>"
+		}
+		console.log(gugu);
+		// innerHTML -> 선택자의 내부에 태그를 추가한다.
+		//document.getElementById("result").innerHTML = gugu;
+		document.querySelector("#result").innerHTML = gugu;
+	}
+	function test() {
+		document.write("test함수에서 실행됨")
+		console.log('콘솔에 정보 출력');
+	}
+	//test(); // 함수 호출
+	
+
+	
+	
+</script>
+</head>
+<body>
+<!-- 								버튼을 클릭하면 -->
+<!-- <input type="button" value="click" onclick="test();alert('실행완료!')"/>  -->
+<input type="button" value="click1" onclick="gugudan(6)"/>
+<input type="button" value="click2" id="btn"/>
+<div id = "result"></div>
+<script type="text/javascript">
+	var btnClick = document.querySelector('#btn');
+	btnClick.onclick = function(){
+		document.getElementById("result").innerHTML = "<h1>구구단 테스트 중</h1>";
+	}
+</script>
+</body>
+</html>

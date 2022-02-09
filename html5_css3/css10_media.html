@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+   body,ul,li{margin:0; padding:0; list-style-type:none;}
+   img{width:50%; height:200px;}
+   body{
+   		background-color: #ddd
+   }
+   li{
+   		background-color: #fff;
+   		border: 1px solid gray;
+   		margin-top: 5px;
+   }
+   
+   /*반응형 스타일 적용하기*/
+   /*320px~600px*/
+   /* all, screen, print, tv, projection .... */
+   @media all and (min-width:320px) and (max-width:600px){
+	   	li{background : yellow;}
+	   	img{width:100%;}
+   }
+   
+   /*601px~800px*/
+   @media all and (min-width:601px) and (max-width:1000px){
+	   	li{background : #000; color:#f00;}
+	   	img{width:30%;}
+   }
+   /*901px~*/
+   @media all and (min-width:901px){
+		li{background : pink; color: green; font-weight: bold;}
+	   	img{width:20%;}
+   }
+</style>
+
+</head>
+<body>
+<ul>
+   <li>현대자동차는 3일(목) 적재 능력을 강화한 ‘캐스퍼 밴’ 모델을 출시했다. 캐스퍼 밴은 캐스퍼의 아이코닉한 디자인과 안전∙편의사양을 그대로 계승하면서 기존 2열 시트 공간을 비워내 940 ℓ의 적재 용량을 구현한 것이 특징이다.</li>
+   <li>지난해 9월 첫 선을 보인 캐스퍼는 아이코닉한 디자인과 다채로운 칼라를 앞세워 경형 시장에 새로운 붐을 일으켰다. 특히 운전석을 포함한 전 좌석 풀 폴딩 기능을 적용함으로써 실내 공간 활용성을 확장한 점이 고객들에게 큰 호응을 이끌어냈다.</li>
+   <li>한층 강화된 공간 활용성을 제공하는 캐스퍼 밴은 법인 고객을 포함해 다양한 용도로 차량을 활용하고자 하는 고객의 선택폭을 한층 넓혀줄 것으로 기대된다 현대차는 캐스퍼 밴에 지능형 안전기술인 ▲전방충돌방지보조(차량/보행자/자전거 탑승자) ▲차로 이탈방지 보조(LKA) ▲차로 유지 보조(LFA) ▲운전자 주의 경고(DAW) ▲하이빔 보조(HBA) ▲전방차량 출발 알림 등을 기본 적용했다.</li>
+   <li>이어 경량화 공법인 핫스탬핑을 주요 부위에 집중적으로 적용함으로써 충돌 시 차체 변형을 최소화하고 고강성 경량 차체 구현으로 비틀림 강성과 평균 인장 강도를 높여 안전성을 확보했다.</li>
+   <li>캐스퍼 밴은 가솔린 1.0 엔진을 탑재해 최고 출력 76PS(마력), 최대 토크 9.7kgf·m, 복합연료소비효율 14.3km/ℓ를 달성했다. 보다 강력한 힘을 원하는 고객들을 위해 가솔린 1.0 터보 엔진도 선택 옵션으로 운영하며,</li>
+   <li>이를 선택 시 최고 출력 100PS, 최대 토크 17.5kgf·m, 복합연비 12.8km/ℓ의 동력 성능을 갖춰낸다. 캐스퍼 밴의 판매 가격은 단일 트림 1,375만원으로 운영되며, 전용 웹사이트 ‘캐스퍼 온라인(casper.hyundai.com)’에서 시간과 공간의 제약 없이 구매가 가능하다. 현대차 관계자는 “캐스퍼 밴 출시로 고객에게 캐스퍼의 다채로운 매력을 다시 한번 선보일 수 있는 기회가 될 것”이라고 말했다.</li>
+</ul>
+<img src="../img/1.jpg"/><img src="../img/2.jpg"/>
+</body>
+</html>

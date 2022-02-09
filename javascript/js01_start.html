@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	document.title = "자바스크립트 제목";
+	document.write("body에 출력할 문자를 표시한다.");
+	//한줄 주석
+	/*
+	여러줄 주석
+	*/
+	//자바 스크립트에서 태그 사용하기
+	document.write("<h1>자바스크립트에서 태그 사용하기</h1>");	//'' "" 결과는 같다
+	document.write('<h1>자바스크립트에서 태그 사용하기</h1>');
+	for(var i=1; i<5; i++){
+	document.write('<img src="../img/' + i + '.jpg"/>');
+	}
+</script>
+
+</head>
+<body>
+<h1>html영역</h1>
+<script type="text/javascript">
+	document.write("자바스크립트 실행됨")
+</script>
+</body>
+</html>
