@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(function() {
+		//상태 선택자
+		
+		//속성값이 text인 객체를 선택하기
+		$(":text").css("width", "300px").css("height","40px");
+		
+		//checked 속성에 대한 선택자
+		$(":checked").attr("checked",false);
+		//$(":checked").prop("checked",true);
+		$(":selected").attr("selected",false);
+		
+		//컨텐츠 선택자
+		//contains(): 특정 문자를 포함한 경우 선택한다.
+		$("p:contains('접종')").css("background-color","#ccc");
+		
+		// has() : 특정 태그를 포함한 경우 선택한다.
+		$("p:has('b')").css('border','2px solid red');
+		
+		// not() : 특정 선택자를 제외한 나머지를 선택한다.
+		$("p:not(:first)").css("color","green");
+		
+		// closest(): 조상선택자
+		$("i").closest("body").css("border","3px dotted green");
+		
+		// filter
+		$("p").filter('.c1').css("color","#fff").css("background","#000");
+		
+		//contents(): 특정선택자의 하위가 다른 태그가 포함된 경우 선택자
+		$("p").contents().css("color","red");
+		
+	});
+</script>
+</head>
+<body>
+<div>
+	<p>(서울=연합뉴스) 김서영 기자 = <b>코로나19</b> 백신 3차 접종을 마친 이들 중 면역저하자를 대상으로 14일부터 4차 접종이 시작된다.</p>
+	<p class="c1">다음달 첫째 주부터는 요양병원·시설 입원, 입소자 및 종사자에 대한 4차도 순차적으로 진행된다.</p>
+	<p class="c1">정부는 감염시 중증으로 이어질 위험이 높은 대상군에 대해 접종을 하되, <i>전체 국민을</i> 대상으로 4차 접종을 확대하는 방안은 검토하고 있지 않다고 밝혔다.</p>
+</div>
+
+<div>
+	<form action="">
+		<label>이름</label>
+		<input type="text" name="username" id="username"/><br/>
+		<label>연락처</label>
+		<input type="text" name="tel" id="tel"/><br/>
+		<label>사용자 동의 여부</label>
+		<input type="radio" name="accept" value="yes" checked>동의
+		<input type="radio" name="accept" value="no" >비동의<br/>
+		<label>자주가는 사이트</label>
+		<select name="site" id="site">
+			<option value="not">==직접선택==</option>
+			<option value="daum" selected>daum.net</option>
+			<option value="nate">nate.com</option>
+			<option value="naver">naver.com</option>
+		</select>
+	</form>
+</div>
+</body>
+</html>
