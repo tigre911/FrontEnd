@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ckeditor</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="//cdn.ckeditor.com/4.17.2/full/ckeditor.js"></script>
+<script>
+    $(function(){
+        // ckeditor
+        CKEDITOR.replace("content");
+
+        //데이터입력 유무 확인
+        $("#frm").submit(function(){
+            if($("#username").val() == ""){
+                alert("이름을 입력하세요!");
+                $("#username").focus();
+                return false;
+            }
+            // console.log($("#content").val());
+            // ckeditor 의 textarea 태그의 value를 얻어오는 함수
+            var txt = CKEDITOR.instances.content.getData();  //이렇게 해야 제대로 값이 넘어간다.
+			console.log(txt);
+            if(txt==""){
+                alert("글 내용을 입력하세요!");
+                return false;
+            }
+            return false;
+            
+            /* 
+			이렇게하면 바로 출력이 안되므로 위에처럼 해야함.
+			if($("#content").val() == ""){
+				alert("글 내용을 입력하세요.");
+				$("#content").focus();
+				return false;
+			} 
+			*/
+			return true;
+		});
+    });
+</script>
+</head>
+
+<body>
+
+<h1>글 등록</h1>
+
+<form method="post" action="aaaa.jsp" id="frm">
+    <div>이름 : <input type="text" name="username" id="username"></div>
+    <div>
+        글 내용
+        <textarea name="content" id="content"></textarea>
+    </div>
+    <input type="submit" value="등록">
+</form>
+
+</body>
+
+</html>
