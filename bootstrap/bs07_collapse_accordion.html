@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Collapse예</title>
+
+<meta name="viewport" content="width=device-width, initial-sale=1" />
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+	integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+	crossorigin="anonymous">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+	integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+	crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<div class="container">
+		<h1>Accodion예</h1>
+        <div id="accordian">
+
+            <div class="card">
+                <div class="card-header" data-target="#v1" data-toggle="collapse">기본으로 보이는 내용 : IASB</div>
+                <div id="v1" class="collapse show" data-parent="#accordian">
+                    토글로 보이는 내용: On 12 May 2011, the IASB issued IFRS 13 Fair
+                    Value Measurement (hereinafter "IFRS 13"). IFRS 13 sets out a single
+                    IFRS framework for measuring fair value and provides comprehensive
+                    guidance on how to measure the fair value of both financial and
+                    non-financial assets and liabilities. IFRS 13 applies when another
+                    IFRS requires or permits fair value measurement or disclosures about
+                    fair value measurements.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" data-target="#v2" data-toggle="collapse">팀 킴</div>
+                <div id="v2" class="collapse show" data-parent="#accordian">
+                    '팀 킴'이었다. 사실상 단 하나 남은 경우의 수를 충족시키기 위한 드라마가
+                    짜릿한 반전을 그려내고 있다. 한국은 16일 중국 베이징 국립아쿠아틱센터에서 열린 2022베이징동계올림픽 컬링 여자
+                    로빈라운드(예선) 8차전에서 덴마크를 상대로 짜릿한 8-7 역전승을 챙겼다. 10엔드 막판까지 6-7로 밀렸지만, 덴마크가
+                    마지막 드로우에서 실수를 범했고, 스킵 김은정이 이를 놓치지 않고 2득점으로 연결하면서 승리를 거뒀다.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" data-target="#v3" data-toggle="collapse">용명 드디어 레골라스가 되다!</div>
+                <div id="v3" class="collapse show" data-parent="#accordian"><img src="../img/4.jpg" width="300px" height="350px"></div>
+            </div>
+        </div>
+
+        <h1>Collapse예</h1>
+        <input type="button" value="클릭하세요" class="btn btn-secondary"
+            data-target="#view" data-toggle="collapse" />
+        <div id="view" class="collapse show">
+            <img src="../img/4.jpg" />
+        </div>
+        
+		<hr />
+		<input type="button" value="클릭하세요" class="btn btn-secondary"
+			data-target="#view1" data-toggle="collapse" />
+		<div id="view1" class="collapse show">2022 베이징 동계 올림픽 여자 쇼트트랙
+			1000m 종목 금메달리스트 수잔 슐팅(네덜란드)이 여자 1500m 결승에서 중국 선수 팔에 밀려났다며 속상함을 드러냈다.
+			슐팅은 1000m 경기 당시, 결승선 통과 직전 최민정을 방해하는 장면으로 논란이 된 선수다.</div>
+	</div>
+
+</body>
+</html>
